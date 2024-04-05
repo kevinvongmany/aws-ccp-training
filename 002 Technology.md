@@ -312,11 +312,25 @@ Allows for:
 ### Redshift Serverless
 Option that means you don't need to manage infrastructure
 
+## Firehose
+Capture, transform and load data streams into AWS data stores. Resources scale automatically based on data volumes. Real-time data processing. Integrates well with Lambda to assist with transforming data.
+No shards so it doesn't retain data.
+Use cases:
+- Data Lake (huge data repository)
+- Real-time analytics
+- Log data
+- Telemetry/IoT data
+
 ## Athena
-Allows querying of S3 objects using SQL. Serverless model, pay per query.
+Allows querying of S3 objects using SQL. Serverless model, pay per query and TB scanned. No ETL processes required. Good for querying log files, or cost explorer reports.
 
 ## Glue
-ETL (Extract, transform and load) service that preps the data for future analysis.
+ETL (Extract, transform and load) service that preps the data for future analysis and machine learning. Works with services such as:
+- S3
+- DynamoDB
+- RDS
+- Redshift
+- Kinesis
 
 ## Kinesis
 Realtime analytics for videos and streaming data. A family of services. Can also build custom apps too related to realtime analytics.
@@ -330,14 +344,36 @@ Good for:
 
 Offers 2 services: Kinesis Data Streams and Kinesis Video Streams
 
-## EMR
-Allows analytics of massive, complex, interconnected data like Social Media networks. Works with Hadoop.
+## Elastic Map Reduce (EMR)
+A fully managed service that allows analytics of massive, complex, interconnected data like Social Media networks. When you see Big Data, think EMR. Works with Apache Spark, Hive, Presto and Hadoop. Petabyte scale data.
+
+## AWS Data Exchange
+An exchange/marketplace
+ that allows you to search and purchase data from 3rd parties for use for a subscription. Generally stored in S3 in the form of CSV, Parquet, image files or JSON data.
+Offers over 3500+ data products like:
+- Financial services
+- Healthcare
+- Weather
+- Manufacturing
+- Telecommunications
+Subscriptions are 1-36 months but some services are free!
+You can also create your own data products to list on the marketplace.
 
 ## Data Pipeline
 Main service that helps move __data__ between compute and storage service. Supports Cloud, On-Prem and hybrid models.
 
 ## QuickSight
 Useful for creating dashboards and visualising data.
+
+## Open Search
+### Elastic Search
+Data analysis for realtime insights. Good for searching log data and business data.
+
+Deploying Elasticsearch cluster can be time consuming and complex. Open Search is a fully managed elasticsearch service by AWS. Integrates with Kibana and Logstash and AWS services too like CloudWatch.
+
+## Manage Streaming for Apache Kafka (MSK)
+Kafka is an open-source software that helps build realtime data streaming pipelines, it can process streams for hundreds of event sources. Uses a queue system to process data as it is produced.
+MSK is a fully managed service by AWS does the heavy lifting of setting up Kafka clusters, provisioning it and managing upgrades. This is a good alternative to Kinesis, but for clients who need to use Kafka instead.
 
 # ML (Machine Learning)
 ML is AI driven technology, that learns about environments and accelerates learning beyond a human level capacity.
@@ -346,19 +382,33 @@ ML is AI driven technology, that learns about environments and accelerates learn
 Helpful AI tool that helps process images and identify metrics within input images and videos, such as detecting if there is a person, chair or object within a photo or video.
 
 ## Comprehend
-Natural-language processing service that reads text and finds relationships within input text.
+Natural-language processing service that reads text and finds relationships within input text. Good way to see if feedback is positive, neutral or negative.
 
 ## Polly
 AI tool that provides an audio reading of a certain input AI voice, to read out input text in a convincing human conversational way.
 
 ## SageMaker
-AWS' flagship AI and machine learning service that is the foundation for improving systems and processes via ML.
+AWS' flagship AI and machine learning service that is the foundation for improving systems and processes via ML. This service allows you to ingest data, build & train a ML model and deploy it.
+Imports data from a data source like S3. Can be deployed to services like EC2.
+
+## Kendra
+Natural language processing, and a customised search service. Can search documents from data sources like FSx, S3, EFS, GitHub, Google Drive etc.
+Supports data types like XML, CSV, DOC, PDFs, etc.
+You can search using fact-based questions (who, what and where) or by using descriptive questions.
+Example:
+When is this document due to be submitted? It'll search your data and give you the answer using clever algorithms by looking up the text and the contextual relationships of the data source text.
 
 ## Translate
 AI tool used to translate text from one language to another.
 
+## Textract
+Extracts text and information from documents.
+
+## Transcribe
+Speech to text service (audio to text). Great for subtitles or meeting notes.
+
 ## Lex
-Chatbot AI tool, used to create AI driven chatbots.
+Chatbot AI tool, used to create AI driven chatbots. Uses natural language models.
 
 # Developer Tools
 Amazon's suite of development tools, built for developers by Amazon developers, which integrates seamlessly with AWS.
