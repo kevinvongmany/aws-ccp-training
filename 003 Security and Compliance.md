@@ -1,5 +1,5 @@
 # Security and Compliance
-25% of the total score in exam
+30% of the total score in exam
 
  - Shared Responsibility
  - IAM - management service, also provides reports for password status and MFA devices for account.

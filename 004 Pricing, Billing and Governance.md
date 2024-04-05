@@ -1,5 +1,5 @@
 # Pricing, Billing and Governance
-Represents 16% of the certification exam.
+Represents 12% of the certification exam.
 
 # AWS Pricing
 
